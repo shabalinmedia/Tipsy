@@ -1,32 +1,24 @@
-//
-//  ResultViewController.swift
-//  Tipsy
-//
-//  Created by Alexander Shabalin on 28/7/22.
-//  Copyright © 2022 The App Brewery. All rights reserved.
-//
 
 import UIKit
 
 class ResultViewController: UIViewController {
     
-    
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var settingsLabel: UILabel!
     
-    
-    
-    
+    var resultToShow: String?
+    var reportToShow: String?
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        totalLabel.text = resultToShow
+        settingsLabel.text = reportToShow
     }
     
-    
-    
+
     @IBAction func recalculatePressed(_ sender: UIButton) {
+        dismiss(animated: true)
     }
     
 
